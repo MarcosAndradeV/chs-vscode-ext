@@ -1,0 +1,25 @@
+{
+  "name": "chs",
+  "displayName": "chs-syntax",
+  "description": "Simple Extention for CHS syntax.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "chs",
+      "aliases": ["chs", "chs"],
+      "extensions": [".chs"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "chs",
+      "scopeName": "source.chs",
+      "path": "./syntaxes/chs.tmLanguage.json"
+    }]
+  }
+}
