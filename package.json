@@ -1,7 +1,7 @@
 {
   "name": "chs",
   "displayName": "chs-syntax",
-  "description": "Simple Extention for CHS syntax.",
+  "description": "Language support for CHS.",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.85.0"
