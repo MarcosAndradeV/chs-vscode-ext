@@ -10,14 +10,26 @@
 		},
 		{
 			"include": "#words"
+		},
+		{
+			"include": "#name"
+		},
+		{
+			"include": "#comments"
 		}
 	],
 	"repository": {
 		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.chs",
-				"match": "\\b(if|while|func|hlt|else)\\b"
-			}]
+			"patterns": [
+				{
+					"name": "keyword.control.chs",
+					"match": "\\b(if|else|func|while|ret|call)\\b"
+				}
+			]
+		},
+		"comments": {
+			"match": "#.*$",
+			"name": "comment.chs"
 		},
 		"strings": {
 			"name": "string.quoted.double.chs",
@@ -30,13 +42,21 @@
 				}
 			]
 		},
-		"words":{
+		"words": {
+			"name": "entity.name.chs",
+			"begin": "[a-zA-Z+=-_!@$%^&*()?\\\\/\\[\\]{}<>]",
+			"end": "[\\s:]",
 			"patterns": [
 				{
-					"name":"keyword.operator",
-					"match": "\\b(dup|swap|pop|ret|call|mod|inc|print|debug)\\b"
+					"name": "entity.name.chs",
+					"match": "\\\\."
 				}
 			]
+		},
+		"numbers": {
+			"name": "constant.numeric.chs",
+			"begin": "\\d",
+			"end": "\\b"
 		}
 	},
 	"scopeName": "source.chs"
