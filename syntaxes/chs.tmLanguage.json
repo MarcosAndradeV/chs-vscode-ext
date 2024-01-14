@@ -6,6 +6,9 @@
 			"include": "#keywords"
 		},
 		{
+			"include": "#directive"
+		},
+		{
 			"include": "#strings"
 		},
 		{
@@ -23,7 +26,15 @@
 			"patterns": [
 				{
 					"name": "keyword.control.chs",
-					"match": "\\b(if|else|func|while|ret|call)\\b"
+					"match": "\\b(if|else|while|var)\\b"
+				}
+			]
+		},
+		"directive": {
+			"patterns": [
+				{
+					"name": "comment.line.chs",
+					"match": "%.*(def|macro)\\b.*"
 				}
 			]
 		},
