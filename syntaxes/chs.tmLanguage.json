@@ -26,7 +26,7 @@
 			"patterns": [
 				{
 					"name": "keyword.control.chs",
-					"match": "\\b(if|else|while|var|set|func)\\b"
+					"match": "\\b(if|else|while|var|set)\\b"
 				}
 			]
 		},
@@ -34,7 +34,7 @@
 			"patterns": [
 				{
 					"name": "comment.line.chs",
-					"match": "%.*(def|macro)\\b.*"
+					"match": "%(def|macro)\\b"
 				}
 			]
 		},
